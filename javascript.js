@@ -6,3 +6,8 @@ function getComputerChoice(choice){
 }
 let ComputerChoice = getComputerChoice(); //Creates a variable using the name and position on the l
 console.log(ComputerChoice)
+
+let PlayerChoice = prompt("Rock, Paper or Scissors?")
+if (PlayerChoice = null || PlayerChoice == '')
+
+    
