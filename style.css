@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Ailerons';
+    src: url('/Users/seyfaro/repos/Rock-Paper-Scissors/Fonts/Ailerons-Regular.woff') format('woff')
+  }
+
+
 body {
     width: 100%;
     background-color: black;
@@ -9,5 +15,11 @@ body {
     text-align: center;
     color: white;
     padding: 50px;
-    font-size: 30px;
+    font-size: 2rem;
+    font-family: "Ailerons", sans-serif;
+    text-shadow: 0 0 0.8em rgb(178, 178, 178);
+}
+
+.subhead{
+    font-size: 1rem;
 }
