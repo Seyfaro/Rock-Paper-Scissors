@@ -5,6 +5,36 @@ console.log("hello world");
 
 
 
+ const image1 = document.getElementById('rock');
+ image1.addEventListener('click', handleClickRock);
+ 
+ const image2 = document.getElementById('paper');
+ image2.addEventListener('click', handleClickPaper);
+ 
+ const image3 = document.getElementById('scissors');
+ image3.addEventListener('click', handleClickScissors);
+ 
+
+
+ function handleClickRock() {
+    PlayerChoice = 'rock';
+    game();
+  }
+  
+  function handleClickPaper() {
+    PlayerChoice = 'paper';
+    game();
+    // do something with myVariable2
+  }
+  
+  function handleClickScissors() {
+    PlayerChoice = 'scissors';
+    game();
+    // do something with myVariable2
+  }
+
+
+  
 
 const values = ['rock', 'paper', 'scissors'] //Values the computer can choose from 
 function getComputerChoice(){
@@ -17,9 +47,8 @@ ComputerChoice = getComputerChoice(); //Creates a variable using the name and po
     
 
 function playRound(PlayerChoice, ComputerChoice){
-    PlayerChoice = PlayerChoice.toLowerCase();
-    ComputerChoice = ComputerChoice.toLowerCase();
-
+    console.log(PlayerChoice);
+    console.log(ComputerChoice);
     //Comparing player and computer choices to determine winner
     if (PlayerChoice ===  ComputerChoice) {
         return 'Draw!';
@@ -35,37 +64,36 @@ function playRound(PlayerChoice, ComputerChoice){
         userScore++;
         return `You win! ${PlayerChoice} beats ${ComputerChoice}.`;
     }
-    
 
+    
 }
 
 
 
 function game() {
+    
     // 5 rounds of the game
-    for (let i = 0; i < 5;  i++) {
-        let PlayerChoice = prompt("Rock, Paper or Scissors?"); // Brings up the popup box
+    //for (let i = 0; i < 5;  i++) {
+        //let PlayerChoice = prompt("Rock, Paper or Scissors?"); // Brings up the popup box
         //Plays the round using the getComputerChoice result,which is called instead of being stored as a variable so that it is different each time
         let result = playRound(PlayerChoice, getComputerChoice());
+
+        console.log(result);
         
-        //DOM to HTML file to display score 
-        let scoreElementPlayer = document.getElementById('playerScoreElement');
-        scoreElementPlayer.textContent = userScore;
- 
-        let scoreElementComputer = document.getElementById('computerScoreElement');
-        scoreElementComputer.textContent = computerScore;
         
-    } 
 
     //Winner
-    if (userScore > computerScore) {
-        console.log(`You win! Score: ${userScore} / 5 !`)
-    } else if (userScore < computerScore) {
-        console.log(`You lost! Your score is ${userScore} / 5.`)
-    } else { 
-        console.log('Tie!')
-    }
+
 }
 
-game();
+
+
+console.log(computerScore)
+
+ //DOM to HTML file to display score 
+ let scoreElementPlayer = document.getElementById('playerScoreElement');
+ scoreElementPlayer.textContent = userScore;
+ 
+ let scoreElementComputer = document.getElementById('computerScoreElement');
+ scoreElementComputer.textContent = computerScore;
 
