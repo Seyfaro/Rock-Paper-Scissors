@@ -53,10 +53,24 @@ body {
 
 .output-box {
     padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 .score-box p {
     color: white;
     text-align: center;
     font-family: 'Ailerons';
+    font-size: 1.5em;
+}
+
+.score-box {
+    border-style: solid;
+    border-color: white;
+    box-shadow: 0 0 0.8em rgb(178, 178, 178);
+    margin-inline: 15em;
+}
+
+
+#scoreBoxTitle {
+    text-decoration: underline;
 }

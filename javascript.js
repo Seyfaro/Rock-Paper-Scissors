@@ -3,6 +3,7 @@ console.log("hello world");
  let userScore = 0;
  let computerScore = 0;
 
+ let scoreElementOutput = document.getElementById('myOutput');
 
 
  const image1 = document.getElementById('rock');
@@ -62,9 +63,9 @@ function playRound(PlayerChoice, ComputerChoice){
         return `You lose! ${ComputerChoice} beats ${PlayerChoice}.`;
     } else {
         userScore++;
-        return `You win! ${PlayerChoice} beats ${ComputerChoice}.`;
+        return scoreElementOutput.textContent = `You win! ${PlayerChoice} beats ${ComputerChoice}.`;
     }
-
+    
     
 }
 
@@ -80,7 +81,13 @@ function game() {
 
         console.log(result);
         
-        
+         //DOM to HTML file to display score 
+    let scoreElementPlayer = document.getElementById('playerScoreElement');
+    scoreElementPlayer.textContent = `You : ${userScore}`;
+    
+    let scoreElementComputer = document.getElementById('computerScoreElement');
+    scoreElementComputer.textContent = `Computer : ${computerScore}`;
+
 
     //Winner
 
@@ -90,10 +97,5 @@ function game() {
 
 console.log(computerScore)
 
- //DOM to HTML file to display score 
- let scoreElementPlayer = document.getElementById('playerScoreElement');
- scoreElementPlayer.textContent = userScore;
- 
- let scoreElementComputer = document.getElementById('computerScoreElement');
- scoreElementComputer.textContent = computerScore;
+
 
