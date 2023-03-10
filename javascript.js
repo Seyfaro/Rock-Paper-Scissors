@@ -1,7 +1,12 @@
-console.log("hello world")
+console.log("hello world");
 
- userScore = 0
- computerScore = 0
+ let userScore = 0;
+ let computerScore = 0;
+
+ //DOM to HTML file
+const scoreElementPlayer = document.getElementById('playerScoreElement');
+scoreElementPlayer.textContent = userScore;
+
 
 const values = ['rock', 'paper', 'scissors'] //Values the computer can choose from 
 function getComputerChoice(){
