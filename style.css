@@ -64,10 +64,11 @@ body {
 }
 
 .score-box {
+    margin: auto;
     border-style: solid;
     border-color: white;
     box-shadow: 0 0 0.8em rgb(178, 178, 178);
-    margin-inline: 15em;
+    width: 15em;
 }
 
 
