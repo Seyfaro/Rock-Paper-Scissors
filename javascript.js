@@ -52,7 +52,7 @@ function playRound(PlayerChoice, ComputerChoice){
     console.log(ComputerChoice);
     //Comparing player and computer choices to determine winner
     if (PlayerChoice ===  ComputerChoice) {
-        return 'Draw!';
+        return scoreElementOutput.textContent = 'Draw!';
     } else if (
         (PlayerChoice === 'rock' && ComputerChoice === 'paper') || 
         (PlayerChoice === 'scissors' && ComputerChoice === 'rock')||
@@ -60,7 +60,7 @@ function playRound(PlayerChoice, ComputerChoice){
     ) {
         computerScore++;
         //Remember to use Option Key + tilde ~ to include variables in a string!
-        return `You lose! ${ComputerChoice} beats ${PlayerChoice}.`;
+        return scoreElementOutput.textContent = `You lose! ${ComputerChoice} beats ${PlayerChoice}.`;
     } else {
         userScore++;
         return scoreElementOutput.textContent = `You win! ${PlayerChoice} beats ${ComputerChoice}.`;
@@ -94,8 +94,6 @@ function game() {
 }
 
 
-
-console.log(computerScore)
 
 
 
