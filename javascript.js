@@ -39,7 +39,7 @@ function playRound(PlayerChoice, ComputerChoice){
 function game() {
     // 5 rounds of the game
     for (let i = 0; i < 5;  i++) {
-        let PlayerChoice = prompt("Rock, Paper or Scissors?"); // Brings up the popup box
+        //let PlayerChoice = prompt("Rock, Paper or Scissors?"); // Brings up the popup box
         //Plays the round using the getComputerChoice result,which is called instead of being stored as a variable so that it is different each time
         let result = playRound(PlayerChoice, getComputerChoice());
 
