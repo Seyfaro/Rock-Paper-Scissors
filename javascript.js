@@ -3,9 +3,7 @@ console.log("hello world");
  let userScore = 0;
  let computerScore = 0;
 
- //DOM to HTML file
-const scoreElementPlayer = document.getElementById('playerScoreElement');
-scoreElementPlayer.textContent = userScore;
+
 
 
 const values = ['rock', 'paper', 'scissors'] //Values the computer can choose from 
@@ -37,6 +35,8 @@ function playRound(PlayerChoice, ComputerChoice){
         userScore++;
         return `You win! ${PlayerChoice} beats ${ComputerChoice}.`;
     }
+    
+
 }
 
 
@@ -44,11 +44,17 @@ function playRound(PlayerChoice, ComputerChoice){
 function game() {
     // 5 rounds of the game
     for (let i = 0; i < 5;  i++) {
-        //let PlayerChoice = prompt("Rock, Paper or Scissors?"); // Brings up the popup box
+        let PlayerChoice = prompt("Rock, Paper or Scissors?"); // Brings up the popup box
         //Plays the round using the getComputerChoice result,which is called instead of being stored as a variable so that it is different each time
         let result = playRound(PlayerChoice, getComputerChoice());
-
-        console.log(result);
+        
+        //DOM to HTML file to display score 
+        let scoreElementPlayer = document.getElementById('playerScoreElement');
+        scoreElementPlayer.textContent = userScore;
+ 
+        let scoreElementComputer = document.getElementById('computerScoreElement');
+        scoreElementComputer.textContent = computerScore;
+        
     } 
 
     //Winner
@@ -62,3 +68,4 @@ function game() {
 }
 
 game();
+
