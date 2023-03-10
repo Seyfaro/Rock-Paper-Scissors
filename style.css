@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'Ailerons';
+    src: url('/Users/seyfaro/repos/Rock-Paper-Scissors/Fonts/Ailerons-Regular.woff') format('woff')
+  }
+
+
+body {
+    width: 100%;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+}
+
+.title{
+    text-align: center;
+    color: white;
+    padding: 50px;
+    font-size: 2rem;
+    font-family: "Ailerons", sans-serif;
+    text-shadow: 0 0 0.8em rgb(178, 178, 178);
+}
+
+.subhead{
+    font-size: 1rem;
+}
+
+.flex-container-icons {
+    padding-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    flex-shrink: 2;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.flex-container-icons img {
+    display: block;
+    max-width: 100%;
+    max-height: 8rem;
+    min-height: 100%;
+    object-fit: contain;
+    object-position: center;
+    margin: 0;
+}
+
+.output-box p {
+    color: white;
+    text-align: center;
+    font-family: 'Ailerons';
+}
+
+.output-box {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.score-box p {
+    color: white;
+    text-align: center;
+    font-family: 'Ailerons';
+    font-size: 1.5em;
+}
+
+.score-box {
+    border-style: solid;
+    border-color: white;
+    box-shadow: 0 0 0.8em rgb(178, 178, 178);
+    margin-inline: 15em;
+}
+
+
+#scoreBoxTitle {
+    text-decoration: underline;
+}

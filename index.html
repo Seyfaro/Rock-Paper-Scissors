@@ -5,11 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Rock Paper Scissors</h1>
-    </header>
-    <script src="javascript.js"></script>
+        <header>
+            <div class= 'title'>
+            <h1>Rock Paper Scissors</h1>
+                <div class="subhead">
+                <h2>Make your move against the computer!</h2>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="flex-container-icons">
+            <div class="rock">
+                <img id='rock' src="/Users/seyfaro/repos/Rock-Paper-Scissors/Resources/PngItem_5512883.png" alt="">
+            </div>
+            <div class="paper">
+                <img id= 'paper' src="/Users/seyfaro/repos/Rock-Paper-Scissors/Resources/—Pngtree—hand-drawn cartoon piece of paper_6070901.png" alt="">
+            </div>
+            <div class="Scissors">
+                <img id= 'scissors' src="/Users/seyfaro/repos/Rock-Paper-Scissors/Resources/—Pngtree—vector scissors icon_3787654.png" alt="">
+            </div>
+
+            
+        </div>
+        <div class="output-box">
+            <p id='myOutput'>Text</p> </p>
+        </div>
+
+        <div class="score-box">
+            <p id="scoreBoxTitle">Score</p>
+            <p id="playerScoreElement">You :</p>
+            <p id="computerScoreElement">Computer :</p>
+        </div>
+    <script defer src="javascript.js"></script>
 </body>
 </html>
